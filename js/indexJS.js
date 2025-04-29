@@ -65,14 +65,22 @@ temp_btn.addEventListener('click', function handlePaddingChange(){
     var paddingLeft = document.getElementById('padding_left');
     selectedElement.style.padding = paddingTop.value + "rem " + paddingRight.value + "rem " + paddingBottom.value + "rem " + paddingLeft.value  + "rem";
 });
+
+temp_btn = document.getElementById('border_radius_btn');
+temp_btn.addEventListener('click', function handleBorderRadius(){
+    var radius = document.getElementById('border_radius');
+    selectedElement.style.borderRadius = radius.value + "rem";
+});
 //.......................................................................
 
 
 
 
 function AddTitle(){
+    var tempDiv = document.createElement('div');
     var btn = document.createElement('button')
     var h1 = document.createElement('h1');
+    tempDiv.appendChild(btn);
     btn.appendChild(h1);
     btn.id = "title" + titleIDCounter;
     titleIDCounter += 1;
@@ -83,7 +91,7 @@ function AddTitle(){
     titleList[titleIDCounter-1].addEventListener('click', openEditor);
     var text = document.getElementById('title_txt');
     h1.innerText = text.value;
-    body.appendChild(btn);
+    body.appendChild(tempDiv);
 }
 
 function openEditor(){
