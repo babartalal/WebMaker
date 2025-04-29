@@ -66,10 +66,43 @@ temp_btn.addEventListener('click', function handlePaddingChange(){
     selectedElement.style.padding = paddingTop.value + "rem " + paddingRight.value + "rem " + paddingBottom.value + "rem " + paddingLeft.value  + "rem";
 });
 
+
+//border-radius
 temp_btn = document.getElementById('border_radius_btn');
 temp_btn.addEventListener('click', function handleBorderRadius(){
     var radius = document.getElementById('border_radius');
     selectedElement.style.borderRadius = radius.value + "rem";
+});
+
+//justify-content
+temp_btn = document.getElementById('align_center');
+temp_btn.addEventListener('click', function handleAlignCenter(){
+    selectedElement.parentElement.style["justifyContent"] = "center";
+});
+temp_btn = document.getElementById('align_right');
+temp_btn.addEventListener('click', function handleAlignRight(){
+    selectedElement.parentElement.style["justifyContent"] = "right";
+});
+temp_btn = document.getElementById('align_left');
+temp_btn.addEventListener('click', function handleAlignLeft(){
+    selectedElement.parentElement.style["justifyContent"] = "left";
+});
+
+//box-shadow
+temp_btn = document.getElementById('box_shadow_btn');
+temp_btn.addEventListener('click', function handleBoxShadow(){
+    var hOffset = document.getElementById('box_shadow_h');
+    var vOffset = document.getElementById('box_shadow_v');
+    var blur = document.getElementById('box_shadow_blur');
+    var spread = document.getElementById('box_shadow_spread');
+    var shadowColor = document.getElementById('box_shadow_color');
+    var inset = document.getElementById('box_shadow_inset');
+    var outset = document.getElementById('box_shadow_outset');
+    var result = hOffset.value+"px " + vOffset.value+"px " + blur.value+"px " +spread.value+"px " + shadowColor.value;
+    if(inset.checked){
+        result += " inset";
+    }
+    selectedElement.style["boxShadow"] = result;
 });
 //.......................................................................
 
@@ -92,6 +125,7 @@ function AddTitle(){
     var text = document.getElementById('title_txt');
     h1.innerText = text.value;
     body.appendChild(tempDiv);
+    tempDiv.style["display"] = "flex";
 }
 
 function openEditor(){
