@@ -63,4 +63,5 @@
     background-color: red;
     padding: 1rem;
     overflow-x: hidden;
+    transition: all 0.4s;
 }
