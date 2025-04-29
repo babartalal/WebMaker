@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar{
+    position: fixed;
+    background-color: #0D47A1;
+    padding: 0.1rem;
+    width: 0rem;
+    height: 100%;
+    border-radius: 0.5rem;
+
+    overflow-x: hidden;
+    transition: all 0.4s;
+}
+.sidebar a{
+    margin: 0.5rem;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    padding-inline: 2rem;
+
+    font-size: larger;
+    color: aliceblue;
+    font-family:'Courier New';
+}
+.sidebar li{
+    margin-top: 2rem;
+}
+.sidebar a:hover{
+    background-color: #d2d2d2ff;
+    color: black;
+}
+
+#sideMenu_btn{
+    margin: 0.4rem 0rem 0.2rem 0.2rem;
+    background: none;
+    border: none;
+}
+#sideMenu_btn div{
+    background-color: #373F42;
+    width: 2rem;
+    height: 0.4rem;
+    margin: 0rem 0rem 0.2rem 0rem;
+    border: none;
+    padding: none;
+}
+
+#tool_box{
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    padding: 1rem;
+    transition: all 0.4s;
+}
+
+#editor{
+    position: fixed;
+    right: 0;
+    background-color: red;
+    padding: 1rem;
+    overflow-x: hidden;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Web Maker</title>
+        <meta name="description" content="Design your Web page">
+        <meta name="author" content="Web Maker">
+
+        <!-- Open Graph Protocol -->
+        <!--
+        <meta property="og:title" content="A brief description">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.mysite">
+        <meta property="og:description" content="A brief description">
+        <meta property="og:image" content="image.png">
+        -->
+
+        <!-- for icon
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        -->
+
+        <!-- Include CSS files here -->
+        <link rel="stylesheet" href="../css/indexStyle.css">
+
+    </head>
+
+    <body id="main_body">
+        <header>
+            <button type="button" id="sideMenu_btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <div class="sidebar" id="daMenu">
+                <ul>
+                    <li>
+                        <a href="" id="tool_btn">Tool</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+
+            <div id="tool_box">
+                <form >
+                    <input type="text" required placeholder="TITLE" id="title_txt">
+                    <button type="button" id="add_title_btn">Add Title</button>
+                </form>
+            </div>
+
+            <div id="editor">
+                <form action="">
+                    <div>
+                        <input type="color" id="txt_color">
+                        <button type="button" id="txt_color_btn">Add color</button>
+                    </div>
+                    
+                    <div>
+                        <input type="color" id="background_color">
+                        <button type="button" id="background_color_btn">Change background color</button>
+                    </div>
+
+                    <div>
+                        <h3>Margin (rem)</h3>
+                        <input type="number" name="margin" id="margin_top" value="0">
+                        <label for="margin_top">Top</label><br>
+
+                        <input type="number" name="margin" id="margin_right" value="0">
+                        <label for="margin_right">Right</label><br>
+
+                        <input type="number" name="margin" id="margin_bottom" value="0">
+                        <label for="margin_bottom">Bottom</label><br>
+
+                        <input type="number" name="margin" id="margin_left" value="0">
+                        <label for="margin_left">Left</label><br>
+
+                        <button type="button" id="margin_btn">OK</button>
+                    </div>
+
+                    <div>
+                        <h3>Padding (rem)</h3>
+                        <input type="number" name="padding" id="padding_top" value="0">
+                        <label for="padding_top">Top</label><br>
+
+                        <input type="number" name="padding" id="padding_right" value="0">
+                        <label for="padding_right">Right</label><br>
+
+                        <input type="number" name="padding" id="padding_bottom" value="0">
+                        <label for="padding_bottom">Bottom</label><br>
+
+                        <input type="number" name="padding" id="padding_left" value="0">
+                        <label for="padding_left">Left</label><br>
+
+                        <button type="button" id="padding_btn">OK</button>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+        
+    </body>
+
+    <footer>
+        <script src="../js/indexJS.js"></script>
+    </footer>
+</html>
