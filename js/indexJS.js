@@ -4,13 +4,22 @@ toolButton.addEventListener('click', handleToolButton);
 
 var menuButton = document.getElementById('sideMenu_btn');
 menuButton.addEventListener('click', openSideMenu);
-let menuOpen = false;
+let menuOpen = true;
+let toolBoxOpen = false;
 
 var selectedElement = "";
 
 
 function handleToolButton(){
     //window.open("../html/tool.html", "popup", "width=300, height=300");
+    var toolBox = document.getElementById('tool_box');
+    if(!toolBoxOpen){
+        toolBox.style.bottom = 0;
+    }
+    else{
+        toolBox.style.bottom = "-20rem";
+    }
+    toolBoxOpen = !toolBoxOpen;
 }
 
 function openSideMenu(){
@@ -33,7 +42,7 @@ titleIDCounter = 0;
 txtAreaCounter = 0;
 editorOpen = false;
 addTitleButton.addEventListener('click', AddTitle);
-editor.style.display = "none";
+//editor.style.display = "none";
 
 
 //editor........................................
@@ -244,11 +253,13 @@ pageColorButton.addEventListener('click', function handlePageColor(){
 function openEditor(){
     if(!editorOpen)
     {
-        editor.style.display = "flex";
+        //editor.style.display = "flex";
+        editor.style.right = "0rem";
         selectedElement = document.getElementById(this.id);
     }
     else{
-        editor.style.display = "none";
+        //editor.style.display = "none";
+        editor.style.right = "-40rem";
     }
     editorOpen = !editorOpen;
 }

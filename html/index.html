@@ -39,7 +39,7 @@
             <div class="sidebar" id="daMenu">
                 <ul>
                     <li>
-                        <a href="" id="tool_btn">Tool</a>
+                        <a id="tool_btn">Tool</a>
                     </li>
                     <li>
                         <a href="index.html">Home</a>
@@ -75,7 +75,7 @@
                 <form action="">
                     <div>
                         <input type="color" id="txt_color">
-                        <button type="button" id="txt_color_btn">Add color</button>
+                        <button type="button" id="txt_color_btn">Change Color</button>
                     </div>
                     
                     <div>
@@ -85,46 +85,54 @@
 
                     <div>
                         <h3>Margin (rem)</h3>
+                        <label for="margin_top">Top</label>
                         <input type="number" name="margin" id="margin_top" value="0">
-                        <label for="margin_top">Top</label><br>
+                        <br>
 
+                        <label for="margin_right">Right</label>
                         <input type="number" name="margin" id="margin_right" value="0">
-                        <label for="margin_right">Right</label><br>
+                        <br>
 
+                        <label for="margin_bottom">Bottom</label>
                         <input type="number" name="margin" id="margin_bottom" value="0">
-                        <label for="margin_bottom">Bottom</label><br>
+                        <br>
 
+                        <label for="margin_left">Left</label>
                         <input type="number" name="margin" id="margin_left" value="0">
-                        <label for="margin_left">Left</label><br>
+                        <br>
 
                         <button type="button" id="margin_btn">OK</button>
                     </div>
 
                     <div>
                         <h3>Padding (rem)</h3>
+                        <label for="padding_top">Top</label>
                         <input type="number" name="padding" id="padding_top" value="0">
-                        <label for="padding_top">Top</label><br>
+                        <br>
 
+                        <label for="padding_right">Right</label>
                         <input type="number" name="padding" id="padding_right" value="0">
-                        <label for="padding_right">Right</label><br>
+                        <br>
 
+                        <label for="padding_bottom">Bottom</label>
                         <input type="number" name="padding" id="padding_bottom" value="0">
-                        <label for="padding_bottom">Bottom</label><br>
+                        <br>
 
+                        <label for="padding_left">Left</label>
                         <input type="number" name="padding" id="padding_left" value="0">
-                        <label for="padding_left">Left</label><br>
+                        <br>
 
                         <button type="button" id="padding_btn">OK</button>
                     </div>
 
                     <div>
-                        <label>Border Radius</label>
+                        <h3>Border Radius</h3>
                         <input type="number" id="border_radius">
                         <button type="button" id="border_radius_btn">OK</button>
                     </div>
 
                     <div>
-                        <label>Align Content</label>
+                        <h3>Align Content</h3>
                         <button type="button" id="align_left">Left</button>
                         <button type="button" id="align_center">Center</button>
                         <button type="button" id="align_right">Right</button>
@@ -143,19 +151,16 @@
                     </div>
 
                     <div>
-                        <label>Text styling</label>
-                        <div>
-                            <label>Text Alignment</label><br>
-                            <input type="radio" name="txtAlign" id="txt_align_left" checked><label>Left</label><br>
-                            <input type="radio" name="txtAlign" id="txt_align_right"><label>Right</label><br>
-                            <input type="radio" name="txtAlign" id="txt_align_center"><label>Center</label><br>
-                            <input type="radio" name="txtAlign" id="txt_align_justify"><label>Justify</label><br>
-                        </div>
+                        <h3>Text Alignment</h3><br>
+                        <input type="radio" name="txtAlign" id="txt_align_left" checked><label>Left</label><br>
+                        <input type="radio" name="txtAlign" id="txt_align_right"><label>Right</label><br>
+                        <input type="radio" name="txtAlign" id="txt_align_center"><label>Center</label><br>
+                        <input type="radio" name="txtAlign" id="txt_align_justify"><label>Justify</label><br>
                         <button type="button" id="txt_style_btn">Apply</button>
                     </div>
 
                     <div>
-                        <label for="">Font Weight</label>
+                        <h3>Font Weight</h3>
                         <select name="fontWeight">
                             <option value="normal" id="font_weight_normal" selected>Normal</option>
                             <option value="lighter" id="font_weight_lighter">Lighter</option>
@@ -168,7 +173,7 @@
                     </div>
 
                     <div>
-                        <label for="fontSize">Font Size</label>
+                        <h3>Font Size</h3>
                         <select name="fontSize" id="fontSize">
                             <option value="large" id="font_size_large">Large</option>
                             <option value="larger" id="font_size_larger">Larger</option>

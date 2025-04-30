@@ -7,6 +7,7 @@
     position: fixed;
     background-color: #0D47A1;
     padding: 0.1rem;
+    left: -5px;
     width: 0rem;
     height: 100%;
     border-radius: 0.5rem;
@@ -48,12 +49,15 @@
 }
 
 #tool_box{
-    background-color: red;
+    background-color: #BECBE2;
+    box-shadow: 0px 0px 120px 40px #144AA0 inset;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
     position: fixed;
-    bottom: 0;
+    bottom: -20rem;
     left: 40%;
     margin: 0.1rem 0.1rem 0.1rem 0.1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     
     overflow: hidden;
     transition: all 0.4s;
@@ -62,12 +66,58 @@
 #editor{
     display: flex;
     position: fixed;
-    right: 0;
-    background-color: red;
+    right: -40rem;
+    background-color: #90BB92;
+    border-radius: 1rem;
+    border: 0.1rem solid black;
     padding: 1rem;
     height: 85%;
     overflow-y: scroll;
     overflow-x: hidden;
     
-    transition: all 0.4s;
+    transition: all 0.5s;
+    transition-timing-function: linear;
+}
+#editor div{
+    border: 0.1rem solid green;
+    margin: 0.2rem 0rem 0.2rem 0rem;
+    padding: 0.05rem 0.1rem 0.05rem 0.1rem;
+}
+#editor h3{
+    font-family: cursive;
+    color: darkslategrey;
+}
+#editor input[type="radio"]{
+    display: inline-flex;
+    width: 5%;
+}
+
+input{
+    border: 0.15rem solid lightblue;
+    width: 100%;
+    height: 1.7rem;
+    margin: 0.25rem;
+}
+input:hover{
+    border: 0.15rem solid black;
+    box-shadow: 0px 0px 2px 2px bisque;
+}
+
+#tool_box button, #editor button{
+    background: none;
+    border: none;
+    background-color: #388E3C;
+    box-shadow: 1px 1px 2px 1px #4CAF50;
+    margin: 0.2rem;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    font-size: medium;
+    color: white;
+}
+
+#tool_box button:hover, #editor button:hover{
+    background-color: #4CAF50;
+    box-shadow: 1px 2px 2px 2px #388E3C;
 }
