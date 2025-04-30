@@ -10,7 +10,7 @@ var selectedElement = "";
 
 
 function handleToolButton(){
-    window.open("../html/tool.html", "popup", "width=300, height=300");
+    //window.open("../html/tool.html", "popup", "width=300, height=300");
 }
 
 function openSideMenu(){
@@ -30,6 +30,7 @@ var addTitleButton = document.getElementById('add_title_btn');
 var editor = document.getElementById('editor');
 let titleList = new Array;
 titleIDCounter = 0;
+txtAreaCounter = 0;
 editorOpen = false;
 addTitleButton.addEventListener('click', AddTitle);
 editor.style.display = "none";
@@ -104,6 +105,48 @@ temp_btn.addEventListener('click', function handleBoxShadow(){
     }
     selectedElement.style["boxShadow"] = result;
 });
+
+temp_btn = document.getElementById('txt_style_btn');
+temp_btn.addEventListener('click', function handleTxtAlignment(){
+    var alignLeft = document.getElementById('txt_align_left');
+    var alignRight = document.getElementById('txt_align_right');
+    var alignCenter = document.getElementById('txt_align_center');
+    var alignJustify = document.getElementById('txt_align_justify');
+    var childElement = selectedElement.children;
+    if(alignLeft.checked){
+        childElement[0].style.textAlign = "left";
+    }
+    else if(alignRight.checked){
+        childElement[0].style.textAlign = "right";
+    }
+    else if(alignCenter.checked){
+        childElement[0].style.textAlign = "center";
+    }
+    else if(alignJustify.checked){
+        childElement[0].style.textAlign = "justify";
+    }
+});
+
+temp_btn = document.getElementById('font_weight_btn');
+temp_btn.addEventListener('click', function handleFontWeight(){
+    var fontNormal = document.getElementById('font_weight_normal').selected;
+    var fontLighter = document.getElementById('font_weight_lighter').selected;
+    var fontBold = document.getElementById('font_weight_bold').selected;
+    var fontBolder = document.getElementById('font_weight_bolder').selected;
+    var childElement = selectedElement.children;
+    if(fontNormal){
+        childElement[0].style.fontWeight = "normal";
+    }
+    else if(fontLighter){
+        childElement[0].style.fontWeight = "lighter";
+    }
+    else if(fontBold){
+        childElement[0].style.fontWeight = "bold";
+    }
+    else if(fontBolder){
+        childElement[0].style.fontWeight = "bolder";
+    }
+});
 //.......................................................................
 
 
@@ -128,10 +171,62 @@ function AddTitle(){
     tempDiv.style["display"] = "flex";
 }
 
+
+//Text Box
+var saveButton = document.createElement('button');
+saveButton["type"] = "button";
+saveButton["innerText"] = "SAVE";
+saveButton.style["display"] = "block";
+saveButton.style["marginLeft"] = "1rem";
+
+temp_btn = document.getElementById('add_txt_Area_btn');
+temp_btn.addEventListener('click', function handleAddTxtBox(){
+    saveButton.style["display"] = "block";
+    var tempDiv = document.createElement('div');
+    var txtArea = document.createElement('textarea');
+    txtArea.style.width = "25%";
+    txtArea.style.height = "25%";
+    txtArea.style["marginLeft"] = "1rem";
+    
+    txtArea["id"] = "txtArea" + txtAreaCounter;
+    txtAreaCounter += 1;
+
+    tempDiv.appendChild(txtArea);
+    tempDiv.appendChild(saveButton);
+    body.appendChild(tempDiv);
+
+});
+
+saveButton.addEventListener('click', function handleSaveTxt(){
+    var str = "";
+    var txtBtn = document.createElement('button'); txtBtn["type"] = "button"; 
+    txtBtn["id"] = "savedtxt" + (txtAreaCounter -1 );
+    var para = document.createElement('p');
+    var tempDiv = document.createElement('div');
+    tempDiv.style["display"] = "flex";
+    var txtArea = document.getElementById('txtArea'+(txtAreaCounter-1));
+    para.innerText = txtArea.value;
+    
+    txtBtn.style["background"] = "none";
+    txtBtn.style["border"] = "none";
+
+
+    tempDiv.appendChild(txtBtn);
+    txtBtn.appendChild(para);
+    body.appendChild(tempDiv);
+
+    txtArea.style["display"] = "none";
+    saveButton.style["display"] = "none";
+    
+    txtBtn.addEventListener('click', openEditor);
+});
+
+//.........
+
 function openEditor(){
     if(!editorOpen)
     {
-        editor.style.display = "";
+        editor.style.display = "flex";
         selectedElement = document.getElementById(this.id);
     }
     else{
