@@ -60,6 +60,9 @@
                     <input type="text" required placeholder="TITLE" id="title_txt">
                     <button type="button" id="add_title_btn">Add Title</button>
                 </form>
+                <div>
+                    <button type="button" id="add_txt_Area_btn">Add a Text Box</button>
+                </div>
             </div>
 
             <div id="editor">
@@ -131,6 +134,31 @@
                         <input type="radio" name="boxShadow" id="box_shadow_inset"><label>inset</label>
                         <input type="radio" name="boxShadow" id="box_shadow_outset" checked><label>outset</label>
                         <button type="button" id="box_shadow_btn">OK</button>
+                    </div>
+
+                    <div>
+                        <label>Text styling</label>
+                        <div>
+                            <label>Text Alignment</label><br>
+                            <input type="radio" name="txtAlign" id="txt_align_left" checked><label>Left</label><br>
+                            <input type="radio" name="txtAlign" id="txt_align_right"><label>Right</label><br>
+                            <input type="radio" name="txtAlign" id="txt_align_center"><label>Center</label><br>
+                            <input type="radio" name="txtAlign" id="txt_align_justify"><label>Justify</label><br>
+                        </div>
+                        <button type="button" id="txt_style_btn">Apply</button>
+                    </div>
+
+                    <div>
+                        <label for="">Font Weight</label>
+                        <select name="fontWeight">
+                            <option value="normal" id="font_weight_normal" selected>Normal</option>
+                            <option value="lighter" id="font_weight_lighter">Lighter</option>
+                            <option value="bold" id="font_weight_bold">Bold</option>
+                            <option value="bolder" id="font_weight_bolder">Bolder</option>
+                        </select>
+                        <button type="button" id="font_weight_btn">
+                            Apply
+                        </button>
                     </div>
                 </form>
             </div>
