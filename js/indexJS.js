@@ -127,6 +127,7 @@ temp_btn.addEventListener('click', function handleTxtAlignment(){
     }
 });
 
+//font-weight
 temp_btn = document.getElementById('font_weight_btn');
 temp_btn.addEventListener('click', function handleFontWeight(){
     var fontNormal = document.getElementById('font_weight_normal').selected;
@@ -146,6 +147,13 @@ temp_btn.addEventListener('click', function handleFontWeight(){
     else if(fontBolder){
         childElement[0].style.fontWeight = "bolder";
     }
+});
+
+var fontSizeButton = document.getElementById('font_size_btn');
+fontSizeButton.addEventListener('click', function handleFontSize(){
+    var childElement = selectedElement.children;
+    var selectedOption = document.getElementById('fontSize');
+    childElement[0].style.fontSize = selectedOption.value;
 });
 //.......................................................................
 
@@ -220,6 +228,16 @@ saveButton.addEventListener('click', function handleSaveTxt(){
     
     txtBtn.addEventListener('click', openEditor);
 });
+
+
+//Change web page color
+var pageColorButton = document.getElementById('page_color_btn');
+pageColorButton.addEventListener('click', function handlePageColor(){
+    var tempColor = document.getElementById('page_color');
+    body.style["backgroundColor"] = tempColor.value;
+});
+
+
 
 //.........
 
