@@ -59,10 +59,16 @@
                 <form >
                     <input type="text" required placeholder="TITLE" id="title_txt">
                     <button type="button" id="add_title_btn">Add Title</button>
+
+                    <div>
+                        <button type="button" id="add_txt_Area_btn">Add a Text Box</button>
+                    </div>
+
+                    <div>
+                        <input type="color" id="page_color"><label>Web Page Color</label>
+                        <button type="button" id="page_color_btn">OK</button>
+                    </div>
                 </form>
-                <div>
-                    <button type="button" id="add_txt_Area_btn">Add a Text Box</button>
-                </div>
             </div>
 
             <div id="editor">
@@ -159,6 +165,24 @@
                         <button type="button" id="font_weight_btn">
                             Apply
                         </button>
+                    </div>
+
+                    <div>
+                        <label for="fontSize">Font Size</label>
+                        <select name="fontSize" id="fontSize">
+                            <option value="large" id="font_size_large">Large</option>
+                            <option value="larger" id="font_size_larger">Larger</option>
+                            <option value="x-large" id="font_size_xlarge">x-Large</option>
+                            <option value="xx-large" id="font_size_xxlarge">xx-Large</option>
+
+                            <option value="small" id="font_size_small">Small</option>
+                            <option value="smaller" id="font_size_smaller">Smaller</option>
+                            <option value="x-small" id="font_size_xsmall">x-Small</option>
+                            <option value="xx-small" id="font_size_xxsmall">xx-Small</option>
+
+                            <option value="medium" id="font_size_medium">Medium</option>
+                        </select>
+                        <button type="button" id="font_size_btn">OK</button>
                     </div>
                 </form>
             </div>
